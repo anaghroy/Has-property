@@ -29,7 +29,7 @@ main {
   justify-content: center;
   background-color: #161719;
   border: 0.3rem solid #424040;
-  box-shadow: 5px 5px 5px #202020;
+  box-shadow: 5px 5px 5px rgba(247, 234, 151, 0.6784313725);
   position: absolute;
   gap: 30px;
   border-radius: 40px;
@@ -47,6 +47,8 @@ main .box {
   gap: 5px;
   padding: 0.2rem;
   letter-spacing: 1px;
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
 main .success {
   background-color: #021d16;
@@ -60,6 +62,7 @@ main .success h1 {
   font-family: font;
   font-weight: 100;
   font-size: 2rem;
+  font-weight: 500;
 }
 main .pending {
   background-color: #1f1400;
@@ -71,6 +74,7 @@ main .pending i {
 }
 main .pending h1 {
   font-family: font;
+  font-weight: 500;
 }
 main .submit {
   background-color: #191c45;
@@ -82,6 +86,7 @@ main .submit i {
 }
 main .submit h1 {
   font-family: font;
+  font-weight: 500;
 }
 main .fail {
   background-color: #3f0e2b;
@@ -93,4 +98,13 @@ main .fail i {
 }
 main .fail h1 {
   font-family: font;
+  font-weight: 500;
+}
+
+main:has(.box:hover) .box {
+  transform: scale(0.8);
+}
+
+main .box:hover {
+  transform: scale(1.2) !important;
 }/*# sourceMappingURL=style.css.map */
