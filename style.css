@@ -17,12 +17,27 @@ body {
 
 body {
   position: relative;
-  background-image: url(https://images.unsplash.com/photo-1702731798348-2ef25e35ead3?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url(https://images.unsplash.com/photo-1749680287741-243118ed6b2c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-position: center;
   background-size: cover;
+  cursor: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
 }
-
-main {
+body #cursor {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  pointer-events: none;
+  width: 50px;
+  transform: translate(-50% -50%);
+  z-index: 1000;
+}
+body main {
   width: 30%;
   height: 50%;
   display: flex;
@@ -39,7 +54,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .box {
+body main .box {
   border-radius: 50px;
   width: 70%;
   display: flex;
@@ -50,63 +65,60 @@ main .box {
   padding: 0.2rem;
   letter-spacing: 1px;
   transition: all 0.3s linear;
-  cursor: pointer;
 }
-main .success {
+body main .success {
   background-color: #021d16;
   border: 0.1rem solid #1cf5bd;
   color: #1cf5bd;
 }
-main .success i {
+body main .success i {
   font-size: 2rem;
 }
-main .success h1 {
+body main .success h1 {
   font-family: font;
   font-weight: 100;
   font-size: 2rem;
   font-weight: 500;
 }
-main .pending {
+body main .pending {
   background-color: #1f1400;
   border: 0.1rem solid #f8d855;
   color: #f8d855;
 }
-main .pending i {
+body main .pending i {
   font-size: 2rem;
 }
-main .pending h1 {
+body main .pending h1 {
   font-family: font;
   font-weight: 500;
 }
-main .submit {
+body main .submit {
   background-color: #191c45;
   border: 0.1rem solid #30316e;
   color: #b5c8fa;
 }
-main .submit i {
+body main .submit i {
   font-size: 2rem;
 }
-main .submit h1 {
+body main .submit h1 {
   font-family: font;
   font-weight: 500;
 }
-main .fail {
+body main .fail {
   background-color: #3f0e2b;
   border: 0.1rem solid #711742;
   color: #febae6;
 }
-main .fail i {
+body main .fail i {
   font-size: 2rem;
 }
-main .fail h1 {
+body main .fail h1 {
   font-family: font;
   font-weight: 500;
 }
-
-main:has(.box:hover) .box {
+body main:has(.box:hover) .box {
   transform: scale(0.8);
 }
-
-main .box:hover {
+body main .box:hover {
   transform: scale(1.2) !important;
 }/*# sourceMappingURL=style.css.map */
